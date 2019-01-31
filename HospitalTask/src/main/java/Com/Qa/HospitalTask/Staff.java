@@ -10,14 +10,12 @@ public class Staff extends People {
 
 	
 	public Staff(String foreName, String surName, int age, String homeAddress, String employmentType, String title,
-			String securityPermissions, String loginPassword) {
+			String securityPermissions) {
 		super(foreName, surName, age, homeAddress);
 		this.employmentType = employmentType;
 		this.title = title;
 		this.securityPermissions = securityPermissions;
-		count++;
-		this.loginID = surName+count;
-		this.loginPassword = loginPassword;
+		
 	}
 	
 	

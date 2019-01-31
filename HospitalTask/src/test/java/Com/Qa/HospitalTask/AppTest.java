@@ -1,34 +1,26 @@
 package Com.Qa.HospitalTask;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import static org.junit.Assert.*;
+
+import org.junit.Test;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest 
-    extends TestCase
-{
+public class AppTest  {
+
+	@Test
 	public void addYoTeam() {
+
+		Hospital MyHospital = new Hospital(12, 12);
+		Receptionist Me = new Receptionist("foreName", "surName", 12, "homeAddress", "employmentType", "title",
+				"securityPermissions");
+		MyHospital.listOfAllPatients.add(new Patient("Jordan", "Hignett", 23, "Anchorage 1", "Broken Leg", "Ward 1",
+				"Ice", "Not Broken", "Dr Jeremiah"));
 		
-	}
-	public void removeFromTeam() {
 		
+		assertEquals(MyHospital.listOfAllPatients.get(0),Me.patientFinder(MyHospital, "Jordan", "Hignett", "Anchorage 1"));
+
 	}
-	public void admitPatient() {
-		
-	}
-	public void releasePatient() {
-		
-	}
-	public void assignTodoctor() {
-		
-	}
-	public void diagnosis() {
-		
-	}
-	public void treatment() {
-		
-	}
+
 }
