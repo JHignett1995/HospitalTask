@@ -4,16 +4,48 @@ public class Staff extends People {
 	String employmentType;
 	String title;
 	String securityPermissions;
+	String loginID;
+	String loginPassword;
+	int count=0;
 
 	
 	public Staff(String foreName, String surName, int age, String homeAddress, String employmentType, String title,
-			String securityPermissions) {
+			String securityPermissions, String loginPassword) {
 		super(foreName, surName, age, homeAddress);
 		this.employmentType = employmentType;
 		this.title = title;
 		this.securityPermissions = securityPermissions;
+		count++;
+		this.loginID = surName+count;
+		this.loginPassword = loginPassword;
 	}
 	
+	
+	
+	public String getLoginID() {
+		return loginID;
+	}
+
+
+
+	public void setLoginID(String loginID) {
+		this.loginID = loginID;
+	}
+
+
+
+	public String getLoginPassword() {
+		return loginPassword;
+	}
+
+
+
+	public void setLoginPassword(String loginPassword) {
+		this.loginPassword = loginPassword;
+	}
+
+
+
 	public String getEmploymentType() {
 		return employmentType;
 	}
